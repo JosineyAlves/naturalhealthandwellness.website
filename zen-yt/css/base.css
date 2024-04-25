@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+/*---------------------------------------- UNIVERSAL STYLES ----------------------------------------*/
+
+html,
+body {
+    font-family: 'Merriweather', serif;
+    font-size: 110%;
+    font-weight: 400;
+    height: 100%;
+    line-height: 1.75;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-top: -15px;
+}
+
+.sectionContainer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.8rem;
+    letter-spacing: -0.05rem;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin: 0 0 1.25rem;
+}
+
+.footnote {
+    font-size: 0.75rem;
+}
+
+
+/*----- Extra Small -----*/
+
+@media(max-width: 767px) {
+    html,
+    body {
+        background-color: #fff;
+    }
+    .sectionContainer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.25rem;
+    }
+    h4 {
+        font-size: 1.15rem;
+    }
+}
+
+
+/*---------------------------------------- LINKS & BUTTONS ----------------------------------------*/
+
+a,
+button {
+    outline: none;
+}
+
+a {
+    color: #cc0000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #990000;
+    text-decoration: none;
+}
+
+button.cta {
+    background-color: #cc0000;
+    border-radius: 5px;
+    color: #fff;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: -0.025em;
+    line-height: 1.8em;
+    margin: 5px 0;
+    min-width: 250px;
+    outline: none;
+    padding: 5px 25px;
+}
+
+button.cta:hover {
+    background: #990000;
+}
+
+
+/*----- Extra Small -----*/
+
+@media(max-width: 767px) {
+    button.cta {
+        font-size: 1.5em;
+        line-height: 1.5em;
+        padding: 10px;
+    }
+    .articleContent {
+        margin-top: 0;
+        padding-top: 10px;
+    }
+}
+
+
+/*---------------------------------------- HEADER ----------------------------------------*/
+
+header {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    width: 100%;
+    padding-bottom: 12px;
+}
+
+header .sectionContainer {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#advertisement {
+    color: #999;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.75rem;
+    margin: 0;
+    text-align: center;
+}
+
+.top-logo {
+    margin-top: 25px;
+}
+
+
+/*---------------------------------------- ARTICLE CONTENT ----------------------------------------*/
+
+.articleContent {
+    border-bottom: 1px solid #000;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    padding-bottom: 75px;
+    padding-top: 15px;
+}
+
+
+/*---------------------------------------- FOOTER ----------------------------------------*/
+
+footer {
+    color: #999;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 10px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+footer a {
+    color: #000;
+    font-family: 'Merriweather', serif;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #cc0000;
+    text-decoration: none;
+}
+
+footer ul {
+    margin-bottom: 10px;
+}

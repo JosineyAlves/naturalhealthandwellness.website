@@ -1,0 +1,75 @@
+header #advertisement {
+    background: #f2f2f2;
+    text-align: center;
+    height: 15px;
+    font-size: 10px;
+    letter-spacing: .5px;
+    line-height: 15px;
+    color: #757575;
+    text-transform: uppercase;
+}
+
+.shdw1 {
+    -webkit-box-shadow: 0 1px 1px rgba(173, 168, 168, 0.1);
+    box-shadow: 0 1px 1px rgba(173, 168, 168, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main-left_Fungus {
+    width: 56%;
+    padding: 12px 0 20px;
+}
+
+.main-left_Fungus_header {
+    font-size: 22px;
+    background: #000;
+    color: #e0e0e0;
+    padding: 3px 20px;
+    display: inline-block;
+    margin: 15px 0;
+}
+
+.main-left_Fungus_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-left_Fungus_info span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.image-wrapper {
+    width: 39%;
+    /* display: inline-block; */
+    float: right;
+}
+
+@media screen and (max-width: 700px) {
+    .main-left_Fungus {
+        width: 100%;
+    }
+    .shdw1 {
+        box-shadow: none;
+    }
+    .text-wrapper {
+        width: 100% !important;
+        border-right: none !important;
+    }
+    .image-wrapper {
+        width: 100% !important;
+        float: none !important;
+    }
+}
+
+#cta-button {
+    border: 2px solid #015bcd;
+    color: #015bcd;
+    display: block;
+    font-size: 20px;
+    padding: 7px 40px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 40px auto 0;
+    background-color: #fff;
+}
