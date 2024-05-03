@@ -76,6 +76,13 @@ a.watch-now-btn {
     margin: 10px auto;
 }
 
+.watch-now-btn .btn-text::after {
+    content: "\f178";
+    /* Código da seta para a direita do Font Awesome */
+    font-family: 'Font Awesome 5 Free';
+    margin-left: 5px;
+}
+
 .text {
     text-align: justify;
     color: #333;
