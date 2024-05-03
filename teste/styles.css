@@ -131,6 +131,23 @@ footer .footer-links a:hover {
     /* Cor do link */
 }
 
+.countdown {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.message {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+}
+
+.timer {
+    font-size: 40px;
+    color: #12692D;
+    margin-top: 10px;
+}
+
 
 /* Adaptação para dispositivos móveis */
 
