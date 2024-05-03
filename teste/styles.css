@@ -59,34 +59,21 @@ input[type="file"] {
     /* Espaçamento superior e inferior */
 }
 
-button,
-button a {
+a.watch-now-btn {
+    display: inline-block;
     width: 80%;
+    /* Ocupa toda a largura do container */
     background-color: #12692D;
     color: #fff;
     padding: 10px 20px;
-    border: none;
     border-radius: 10px;
     font-size: 25px;
     cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s;
-    position: relative;
-    font-weight: 600;
-    margin: 10px auto;
     text-decoration: none;
-    /* Remover sublinhado */
-}
-
-button:hover,
-button a:hover {
-    background-color: #0d4f21;
-    /* Tom mais escuro do verde */
-}
-
-button::after {
-    content: "\27A1";
-    margin-left: 3px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    position: relative;
+    margin: 10px auto;
 }
 
 .text {
@@ -157,13 +144,6 @@ footer .footer-links a:hover {
         /* Reduzindo o espaçamento superior da imagem */
         margin-bottom: 10px;
         /* Reduzindo o espaçamento inferior da imagem */
-    }
-    button {
-        font-size: 22px;
-        /* Reduzindo o tamanho da fonte do botão */
-        padding: 15px 20px;
-        /* Reduzindo o padding do botão */
-        width: 100%;
     }
     .text {
         font-size: 18px;
