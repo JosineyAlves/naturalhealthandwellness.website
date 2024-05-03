@@ -47,15 +47,14 @@ button {
     color: #fff;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 25px;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s;
     position: relative;
-    font-weight: 500;
+    font-weight: 600;
     margin: 10px auto;
-    /* Espaçamento superior e inferior */
 }
 
 button::after {
@@ -106,14 +105,26 @@ footer .footer-links a:hover {
 
 /* Adaptação para dispositivos móveis */
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
     .container {
-        max-width: 90%;
-        /* Reduzindo a largura máxima para telas menores */
+        padding: 10px;
+        /* Reduzindo o padding para telas menores */
+    }
+    .imagem {
+        margin-top: 10px;
+        /* Reduzindo o espaçamento superior da imagem */
+        margin-bottom: 10px;
+        /* Reduzindo o espaçamento inferior da imagem */
     }
     button {
-        font-size: 20px;
+        font-size: 18px;
         /* Reduzindo o tamanho da fonte do botão */
+        padding: 8px 16px;
+        /* Reduzindo o padding do botão */
+    }
+    .text {
+        font-size: 14px;
+        /* Reduzindo o tamanho da fonte dos textos */
     }
 }
 
