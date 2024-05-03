@@ -59,7 +59,8 @@ input[type="file"] {
     /* Espaçamento superior e inferior */
 }
 
-button {
+button,
+button a {
     width: 80%;
     background-color: #12692D;
     color: #fff;
@@ -73,15 +74,19 @@ button {
     position: relative;
     font-weight: 600;
     margin: 10px auto;
+    text-decoration: none;
+    /* Remover sublinhado */
+}
+
+button:hover,
+button a:hover {
+    background-color: #0d4f21;
+    /* Tom mais escuro do verde */
 }
 
 button::after {
     content: "\27A1";
-    margin-left: 5px;
-}
-
-button:hover {
-    background-color: #0d4f21;
+    margin-left: 3px;
 }
 
 .text {
@@ -128,6 +133,15 @@ footer .footer-links a {
 
 footer .footer-links a:hover {
     text-decoration: underline;
+}
+
+.highlight-link {
+    font-weight: bold;
+    /* Negrito */
+    text-decoration: none;
+    /* Sublinhado */
+    color: #000000;
+    /* Cor do link */
 }
 
 
