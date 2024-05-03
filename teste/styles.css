@@ -145,8 +145,9 @@ footer .footer-links a:hover {
     button {
         font-size: 22px;
         /* Reduzindo o tamanho da fonte do botão */
-        padding: 10px 20px;
+        padding: 20px 20px;
         /* Reduzindo o padding do botão */
+        width: 100%;
     }
     .text {
         font-size: 18px;
