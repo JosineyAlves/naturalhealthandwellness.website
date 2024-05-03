@@ -1,7 +1,16 @@
+body,
+button,
+input,
+select,
+textarea,
+footer {
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #ccc;
     /* Cinza */
 }
@@ -41,8 +50,7 @@ input[type="file"] {
 }
 
 button {
-    width: 100%;
-    /* Largura total do container */
+    width: 80%;
     background-color: #12692D;
     color: #fff;
     padding: 10px 20px;
@@ -75,27 +83,34 @@ button:hover {
 
 footer {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 100px;
     padding-top: 20px;
     border-top: 1px solid #ccc;
 }
 
-footer .copyright,
+footer .copyright {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #333;
+}
+
 footer .disclaimer {
     margin-bottom: 10px;
     font-size: 14px;
-    color: #555;
+    color: #333;
 }
 
 footer .footer-links {
     margin-top: 10px;
     font-size: 14px;
-    color: #555;
+    color: #333;
+    font-weight: 500;
 }
 
 footer .footer-links a {
     text-decoration: none;
-    color: #555;
+    color: #333;
 }
 
 footer .footer-links a:hover {
