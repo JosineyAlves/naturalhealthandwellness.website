@@ -94,9 +94,10 @@ button:hover {
 
 footer {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
     padding-top: 20px;
-    border-top: 1px solid #ccc;
+    padding-bottom: 20px;
+    border-top: 1px solid #333;
 }
 
 footer .copyright {
@@ -108,7 +109,8 @@ footer .copyright {
 
 footer .disclaimer {
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 1.5;
     color: #333;
 }
 
