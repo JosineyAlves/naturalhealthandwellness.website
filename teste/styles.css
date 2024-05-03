@@ -13,7 +13,7 @@ body {
     /* Centraliza horizontalmente */
     padding: 20px;
     border-radius: 10px;
-    max-width: 60%;
+    max-width: 80%;
     /* Largura máxima de 80% da tela */
     text-align: center;
     /* Centraliza todo o conteúdo */
@@ -35,19 +35,13 @@ input[type="file"] {
 
 .imagem {
     max-width: 100%;
-    /* Define a largura máxima da imagem como 100% do container */
     height: auto;
-    /* Mantém a proporção da imagem */
-    margin-top: 20px;
-    /* Espaçamento superior */
-    margin-bottom: 20px;
-    /* Espaçamento inferior */
+    margin: 20px auto;
+    /* Espaçamento superior e inferior */
 }
 
 button {
-    display: block;
-    /* Alterado para block */
-    width: 80%;
+    width: 100%;
     /* Largura total do container */
     background-color: #12692D;
     color: #fff;
@@ -66,20 +60,16 @@ button {
 
 button::after {
     content: "\27A1";
-    /* Código do ícone de seta */
     margin-left: 5px;
-    /* Espaçamento entre o texto e o ícone */
 }
 
 button:hover {
     background-color: #0d4f21;
-    /* Tom mais escuro do verde */
 }
 
 .text {
     text-align: center;
     color: #333;
-    /* Cor do texto */
     font-size: 16px;
     line-height: 1.5;
 }
@@ -111,4 +101,38 @@ footer .footer-links a {
 
 footer .footer-links a:hover {
     text-decoration: underline;
+}
+
+
+/* Adaptação para dispositivos móveis */
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 90%;
+        /* Reduzindo a largura máxima para telas menores */
+    }
+    button {
+        font-size: 20px;
+        /* Reduzindo o tamanho da fonte do botão */
+    }
+}
+
+
+/* Adaptação para tablets */
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 80%;
+        /* Largura máxima maior para tablets */
+    }
+}
+
+
+/* Adaptação para desktops */
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 70%;
+        /* Largura máxima maior para desktops */
+    }
 }
