@@ -156,6 +156,9 @@ footer .footer-links a:hover {
         padding: 10px;
         /* Reduzindo o padding para telas menores */
     }
+    a.watch-now-btn {
+        font-size: 20px;
+    }
     .imagem {
         margin-top: 10px;
         /* Reduzindo o espaçamento superior da imagem */
