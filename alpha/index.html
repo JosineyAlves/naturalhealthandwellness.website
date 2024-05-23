@@ -11,18 +11,27 @@
         html {
             margin: 0;
             padding: 0;
-            height: 100%;
+            width: 100%;
+            /* Garante que o body ocupe a largura total */
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         
         .container {
-            width: 90%;
-            max-width: 600px;
-            margin: auto;
+            width: 100%;
+            max-width: 800px;
+            /* Limita a largura máxima do conteúdo central */
+            margin: 20px auto;
             text-align: center;
-            padding-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
         }
         
         h1,
@@ -33,9 +42,11 @@
         .video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 177.78%;
-            /* Proporção para 1080x1920 */
             height: 0;
+            padding-bottom: 177.78%;
+            /* Proporção correta para vídeos 1080x1920 */
+            overflow: hidden;
+            /* Impede que o vídeo ultrapasse os limites do contêiner */
         }
         
         .video-container img {
@@ -48,9 +59,12 @@
         }
         
         .footer {
-            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
             font-size: 0.9em;
             color: #666;
+            background-color: #f4f4f4;
         }
         
         .footer a {
@@ -60,20 +74,17 @@
         
         @media (min-width: 769px) {
             .container {
-                max-width: 500px;
-            }
-            .video-container {
-                width: 100%;
-                padding-bottom: 177.78%;
-                /* Mantém a proporção para desktop também */
+                max-width: 700px;
+                /* Aumenta a largura máxima em telas maiores */
             }
         }
         
         @media (max-width: 768px) {
-            /* Ocupa a tela inteira em dispositivos móveis */
             .video-container {
                 height: 100vh;
+                /* Ocupa a altura total da tela em dispositivos móveis */
                 padding-bottom: 0;
+                /* Remove o padding para ajustar o vídeo corretamente */
             }
         }
     </style>
@@ -97,11 +108,11 @@
             </style>
         </div>
         <h2>🎧 Asegúrate de que el sonido esté encendido.</h2>
-        <div class="footer">
-            <a href="termos.html" class="text-dark font-weight-bold">Termos de Uso</a> | <a href="privacidade.html" class="text-dark font-weight-bold">Política de Privacidade</a>
-            <p>© 2022 – Todos os direitos reservados</p>
-            <p>Este site não faz parte nem é endossado pelo Facebook. Facebook é uma marca comercial da Facebook, Inc.</p>
-        </div>
+    </div>
+    <div class="footer">
+        <a href="termos.html" class="text-dark font-weight-bold">Termos de Uso</a> | <a href="privacidade.html" class="text-dark font-weight-bold">Política de Privacidade</a>
+        <p>© 2022 – Todos os direitos reservados</p>
+        <p>Este site não faz parte nem é endossado pelo Facebook. Facebook é uma marca comercial da Facebook, Inc.</p>
     </div>
 </body>
 
