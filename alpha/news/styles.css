@@ -242,6 +242,12 @@ body {
     .featured-post img {
         width: 100%;
     }
+    .featured-post p {
+        width: 90%;
+    }
+    .featured-post h3 {
+        width: 90%;
+    }
 }
 
 
@@ -292,7 +298,7 @@ body {
 }
 
 .button:hover {
-    background-color: #1890FF;
+    background-color: #198be2;
     color: #ffffff;
     /* Cor do texto */
 }
