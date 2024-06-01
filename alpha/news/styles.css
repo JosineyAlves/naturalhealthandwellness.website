@@ -279,6 +279,25 @@ body {
     font-weight: 600;
 }
 
+.countdown {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container h4 {
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+.timer {
+    font-size: 35px;
+    color: #346991;
+    margin-top: auto;
+    align-items: center;
+}
+
 .button {
     display: inline-block;
     background-color: #346991;
