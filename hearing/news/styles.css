@@ -187,21 +187,27 @@ body {
     align-items: center;
     /* Centraliza os itens horizontalmente */
 }
-#vid_66687b78e7baaf000af3548b {
-    width: 100%; /* Ocupa 100% da largura do container */
-    max-width: 340px; /* Largura máxima para o vídeo */
-    height: auto; /* Altura ajustada automaticamente para manter a proporção */
+.video-container {
+    width: 75%; /* Ajusta a largura para 75% do container da postagem destacada */
+    max-width: 640px; /* Largura máxima para o vídeo */
     margin: auto; /* Centraliza o vídeo horizontalmente */
 }
 
+#vid_66687b78e7baaf000af3548b {
+    width: 100%; /* Faz o vídeo ocupar 100% do novo container */
+    height: auto; /* Altura ajustada automaticamente */
+    padding-top: 0; /* Remove o padding se não for mais necessário */
+}
+@media (max-width: 768px) {
+    .video-container {
+        width: 100%; /* Faz o container do vídeo ocupar 100% da largura da tela */
+        max-width: none; /* Remove qualquer limite máximo de largura */
+    }
 
-.featured-post img {
-    width: 40%;
-    /* Ajuste de largura para a imagem */
-    height: auto;
-    border-radius: 5px;
-    margin-top: 20px;
-    /* Espaço após o título */
+    #vid_66687b78e7baaf000af3548b {
+        width: 100%; /* Garante que o vídeo também ocupe 100% do seu container */
+        height: auto; /* Ajusta a altura para manter a proporção */
+    }
 }
 
 .featured-post h1 {
@@ -253,9 +259,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .featured-post img {
-        width: 100%;
-    }
     .featured-post p {
         width: 90%;
     }
@@ -267,8 +270,7 @@ body {
 
 /* Para todas as imagens dentro de postagens */
 
-.post img,
-.featured-post img {
+.post img{
     max-width: 100%;
     /* Garante que a imagem não ultrapasse o contêiner */
     height: auto;
