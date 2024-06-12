@@ -174,7 +174,7 @@ body {
 }
 
 .featured-post {
-    background-color: #f9f9f9;
+    background-color: #eeeded;
     padding: 5px;
     padding-top: 20px;
     margin-bottom: 30px;
@@ -186,40 +186,16 @@ body {
     /* Organiza os filhos em coluna */
     align-items: center;
     /* Centraliza os itens horizontalmente */
-}
-.video-container {
-    width: 75%; /* Ajusta a largura para 75% do container da postagem destacada */
-    max-width: 640px; /* Largura máxima para o vídeo */
-    margin: auto; /* Centraliza o vídeo horizontalmente */
+    width: 860px;
+    height: auto;
 }
 
-#vid_66687b78e7baaf000af3548b {
-    width: 100%; /* Faz o vídeo ocupar 100% do novo container */
-    height: auto; /* Altura ajustada automaticamente */
-    padding-top: 0; /* Remove o padding se não for mais necessário */
-}
-@media (max-width: 768px) {
-    .video-container {
-        width: 100%; /* Faz o container do vídeo ocupar 100% da largura da tela */
-        max-width: none; /* Remove qualquer limite máximo de largura */
-    }
-
-    #vid_66687b78e7baaf000af3548b {
-        width: 100%; /* Garante que o vídeo também ocupe 100% do seu container */
-        height: auto; /* Ajusta a altura para manter a proporção */
-    }
-}
-
-.featured-post h1 {
-    font-size: 20px;
-    color: #ffffff;
-    background-color: #D0021B;
-    width: auto;
-    padding: 6px 50px;
-    /* Título ocupa a largura total */
-    text-align: center;
-    /* Título centralizado */
-    font-weight: bold;
+.featured-post img {
+    width: 80%;
+    /* Ajuste de largura para a imagem */
+    height: auto;
+    margin-top: 20px;
+    /* Espaço após o título */
 }
 
 .featured-post h2 {
@@ -241,9 +217,9 @@ body {
 }
 
 .featured-post p {
-    color: #666;
+    color: #383838;
     line-height: 1.6;
-    font-size: 16px;
+    font-size: 18px;
     width: 80%;
     /* Texto não ocupa toda a largura para melhor legibilidade */
     text-align: justify;
@@ -259,6 +235,12 @@ body {
 }
 
 @media (max-width: 768px) {
+    .featured-post{
+        width: 100%;
+    }
+    .featured-post img {
+        width: 100%;
+    }
     .featured-post p {
         width: 90%;
     }
@@ -270,7 +252,7 @@ body {
 
 /* Para todas as imagens dentro de postagens */
 
-.post img{
+.post img {
     max-width: 100%;
     /* Garante que a imagem não ultrapasse o contêiner */
     height: auto;
@@ -336,4 +318,19 @@ body {
     background-color: #198be2;
     color: #ffffff;
     /* Cor do texto */
+}
+.contador {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #D0021B;
+    width: auto;
+    padding: 3px 50px;
+    /* Título ocupa a largura total */
+    text-align: center;
+    /* Título centralizado */
+    font-weight:normal;
+}
+#vagas {
+    color:  #ffffff; /* Altera a cor dos números para vermelho */
+    font-weight: bold;
 }
