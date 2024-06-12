@@ -205,12 +205,14 @@ body {
 }
 
 .featured-post h2 {
-    font-size: 22px;
+    font-size: 23px;
     color: #333;
     width: 100%;
+    max-width:100%;
     /* Título ocupa a largura total */
     text-align: center;
     /* Título centralizado */
+    font-style: italic;
 }
 
 .featured-post h3 {
