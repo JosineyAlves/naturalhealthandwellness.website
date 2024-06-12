@@ -37,7 +37,7 @@ body {
 }
 
 .date {
-    font-size: 12px;
+    font-size: 14px;
     align-self: flex-start;
 }
 
@@ -126,6 +126,7 @@ body {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         border-top: 1px solid #ccc;
         border-bottom: 1px solid #ccc;
+        font-size: 12px;
     }
 }
 
@@ -189,13 +190,18 @@ body {
     width: 860px;
     height: auto;
 }
-
+.featured-post a {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 100%; /* Ocupa toda a largura do contêiner pai */
+}
 .featured-post img {
     width: 80%;
     /* Ajuste de largura para a imagem */
     height: auto;
     margin-top: 20px;
     /* Espaço após o título */
+    display: flex;
 }
 
 .featured-post h2 {
@@ -278,7 +284,7 @@ body {
 
 .countdown {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .container h4 {
@@ -296,28 +302,34 @@ body {
 }
 
 .button {
-    display: inline-block;
+    display: block; /* Mudar para block para melhor controle sobre a largura */
     background-color: #346991;
     color: #ffffff;
     padding: 20px 30px;
     border-radius: 10px;
-    /* Borda arredondada */
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
-    margin: 20px auto;
-    /* Centralizar e adicionar espaçamento vertical */
-    display: block;
+    margin: 20px auto; /* Assegurar que o botão esteja centralizado horizontalmente */
     text-align: center;
-    /* Alinhar texto ao centro */
     transition: background-color 0.3s ease;
-    /* Transição suave ao passar o mouse */
+    max-width: 60%; /* Limitar a largura máxima para não ultrapassar o container */
+    box-sizing: border-box; /* Incluir padding e border no cálculo da largura */
 }
 
 .button:hover {
     background-color: #198be2;
     color: #ffffff;
     /* Cor do texto */
+}
+@media (max-width: 768px) {
+    .button {
+        padding: 20px 30px; /* Padding maior para mobile */
+        font-size: 16px; /* Fonte maior para melhor leitura em dispositivos móveis */
+        max-width: 100%; /* Largura total no mobile */
+        height: auto; /* Altura automática para se adaptar ao conteúdo no mobile */
+        width: 90%; /* Uso de 90% da largura do container para manter uma margem */
+    }
 }
 .contador {
     font-size: 16px;
