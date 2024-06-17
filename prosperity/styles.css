@@ -1,0 +1,358 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    /* Centraliza o contêiner principal horizontalmente */
+}
+
+.container {
+    width: 100%;
+    /* Ocupa 100% da largura até o limite máximo */
+    max-width: 1200px;
+    /* Limite máximo para desktop */
+    min-height: 100vh;
+    /* Garante que o contêiner tenha pelo menos a altura da tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    /* Adiciona espaçamento lateral */
+    box-sizing: border-box;
+    /* Garante que o padding não adicione largura ao contêiner */
+}
+
+.nyt-header {
+    background-color: #ffffff;
+    color: #121212;
+    padding: 10px;
+    width: 100%;
+    /* Garante que o cabeçalho ocupe toda a largura do contêiner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.date {
+    font-size: 14px;
+    align-self: flex-start;
+}
+
+.nyt-logo img {
+    height: 90px;
+    width: auto;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #121212;
+    font-size: 20px;
+}
+
+.nyt-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.nyt-nav li {
+    padding: 0 15px;
+}
+
+.nyt-nav a {
+    text-decoration: none;
+    color: #121212;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .nyt-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+    .nyt-logo img {
+        height: 45px;
+    }
+    .nyt-nav ul {
+        display: none;
+        /* Inicialmente escondido */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        background-color: #fff;
+        /* Cor de fundo alterada para branco */
+        top: 90px;
+        /* Espaçamento aumentado para não sobrepor a data */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Sombra para destacar o menu */
+        border-top: 2px solid #ccc;
+        /* Bordas mais destacadas */
+        z-index: 1000;
+        /* Garante que o menu fique sobre outros elementos */
+    }
+    .nyt-nav.active ul {
+        display: flex;
+        /* Mostrar quando ativo */
+    }
+    .nyt-nav li {
+        text-align: left;
+        width: auto;
+        padding: 10px 0 10px 30px;
+        /* Adiciona padding para mais espaço entre os itens */
+    }
+    .date {
+        align-self: center;
+        order: 2;
+        margin-left: 0;
+        background-color: #f2f2f2;
+        width: 100%;
+        padding: 10px 0 10px 30px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        font-size: 12px;
+    }
+}
+
+.post-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.post {
+    width: 30%;
+    /* Cada postagem ocupa cerca de um terço da largura do container */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.post h3 {
+    margin-top: 10px;
+    color: #333;
+}
+
+.post p {
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .post-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .post {
+        width: 90%;
+        /* No mobile, cada postagem ocupa mais espaço */
+    }
+}
+
+.featured-post {
+    background-color: #eeeded;
+    padding: 5px;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    /* Espaço entre a postagem destacada e as outras postagens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    /* Organiza os filhos em coluna */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    width: 860px;
+    height: auto;
+}
+.featured-post a {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 100%; /* Ocupa toda a largura do contêiner pai */
+}
+.featured-post img {
+    width: 80%;
+    /* Ajuste de largura para a imagem */
+    height: auto;
+    margin-top: 20px;
+    /* Espaço após o título */
+    display: flex;
+}
+
+.scientist-reveals {
+    font-size: 20px;
+    color: #0e0d0d;
+    width: 100%;
+    max-width:100%;
+    /* Título ocupa a largura total */
+    text-align: center;
+    /* Título centralizado */
+    font-weight: normal;
+}
+.featured-post h2 {
+    font-size: 26px;
+    color: #0e0d0d;
+    width: 100%;
+    max-width:100%;
+    /* Título ocupa a largura total */
+    text-align: center;
+    /* Título centralizado */
+}
+.featured-post h3 {
+    font-size: 12px;
+    color: #666;
+    width: 80%;
+    /* Título ocupa a largura total */
+    text-align: justify;
+    /* Título centralizado */
+}
+
+.featured-post p {
+    color: #383838;
+    line-height: 1.6;
+    font-size: 18px;
+    width: 80%;
+    /* Texto não ocupa toda a largura para melhor legibilidade */
+    text-align: justify;
+    /* Justifica o texto */
+    margin-top: 10px;
+    /* Espaço após a imagem */
+}
+
+.highlight-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .featured-post{
+        width: 100%;
+    }
+    .featured-post img {
+        width: 100%;
+    }
+    .featured-post p {
+        width: 90%;
+    }
+    .featured-post h3 {
+        width: 90%;
+    }
+}
+
+
+/* Para todas as imagens dentro de postagens */
+
+.post img {
+    max-width: 100%;
+    /* Garante que a imagem não ultrapasse o contêiner */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    border-radius: 5px;
+    /* Mantém o design arredondado */
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background-color: #121212;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.news {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.countdown {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.container h4 {
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+.timer {
+    font-size: 35px;
+    color: #F4B625;
+    margin-top: auto;
+    align-items: center;
+}
+
+.button {
+    display: block; /* Mudar para block para melhor controle sobre a largura */
+    background-color: #F4B625;
+    color: #0e0d0d;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    text-decoration: none;
+    margin: 20px auto; /* Assegurar que o botão esteja centralizado horizontalmente */
+    text-align: center;
+    transition: background-color 0.3s ease;
+    max-width: 60%; /* Limitar a largura máxima para não ultrapassar o container */
+    box-sizing: border-box; /* Incluir padding e border no cálculo da largura */
+}
+
+.button:hover {
+    background-color: #af7d08;
+    color: #ffffff;
+    /* Cor do texto */
+}
+@media (max-width: 768px) {
+    .button {
+        padding: 20px 30px; /* Padding maior para mobile */
+        font-size: 16px; /* Fonte maior para melhor leitura em dispositivos móveis */
+        max-width: 100%; /* Largura total no mobile */
+        height: auto; /* Altura automática para se adaptar ao conteúdo no mobile */
+        width: 90%; /* Uso de 90% da largura do container para manter uma margem */
+    }
+}
+.contador {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #D0021B;
+    width: auto;
+    padding: 3px 50px;
+    /* Título ocupa a largura total */
+    text-align: center;
+    /* Título centralizado */
+    font-weight:normal;
+}
+#vagas {
+    color:  #ffffff; /* Altera a cor dos números para vermelho */
+    font-weight: bold;
+}
