@@ -52,7 +52,7 @@ function atualizarVagas() {
         const diminuir = Math.random() < 0.85;
         const quantidade = Math.floor(Math.random() * 3) + 1;
 
-        if (diminuir && vagas > 1) {
+        if (diminuir && vagas > 0) {
             vagas -= quantidade;
         } else if (!diminuir && vagas < 23) {
             vagas += quantidade;
@@ -62,7 +62,7 @@ function atualizarVagas() {
         if (vagas < 0) vagas = 1;
     } else if (tempoAtual - tempoInicial >= tempoMinimo) {
         // Alternar entre 0 e 1 vagas quando o tempo mínimo foi atingido
-        vagas = vagas === 1;
+        vagas = vagas === 0 ? 1 : 0;
     }
 
     // Atualiza o display de vagas
