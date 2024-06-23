@@ -10,7 +10,7 @@
       <style>
          body {
          margin: 0;
-         padding: 20px 0; /* Adicionado espaçamento superior e inferior */
+         padding-top: 20px;
          font-family: 'Roboto', serif;
          background-color: #1F1F1F;
          display: flex;
@@ -22,7 +22,7 @@
          .container {
          width: 90%;
          max-width: 800px;
-         padding: 20px;
+         padding: 0;
          text-align: center;
          }
          .acessos {
@@ -53,29 +53,30 @@
          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra leve para dar um efeito elevado */
          }
          h1{
-            font-size: 40px;
-            font-weight: bold;
+            font-size: 35px;
+            font-weight: 900;
             color: #fff;
             font-style: italic;
+            margin-bottom: -0px;
          }
          a {
             color: #929292;
             text-decoration: none;
         }
          footer {
-         width: 90%;
+         width: 95%;
          max-width: 800px;
          text-align: center;
          padding: 10px;
-         margin-top: 80px; /* Mantém o espaçamento original acima do footer */
-         font-size: 13px;
+         margin-top: 100px; /* Mantém o espaçamento original acima do footer */
+         font-size: 12px;
          color: #929292;
          
          }
          /* Regras de mídia para dispositivos com larguras menores */
          @media (max-width: 600px) {
          .container, footer {
-         width: 90%; /* Aumenta a largura para dispositivos menores */
+         width: 95%; /* Aumenta a largura para dispositivos menores */
          max-width: none; /* Remove a restrição de largura máxima */
          }
          .container {
