@@ -1,119 +1,182 @@
 <!DOCTYPE html>
-<html lang="en-Us">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>ERECTION + 300%</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-      <style>
-         body {
-         padding-top: 20px;
-         font-family: 'Roboto', serif;
-         background-color: #1F1F1F;
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         justify-content:baseline;
-         min-height: auto;
-         }
-         .container {
-         width: 90%;
-         max-width: 800px;
-         padding: 0;
-         text-align: center;
-         }
-         .acessos {
-         max-width: 800px;
-         font-size: 18px;
-         color: #fff;
-         display: flex; /* Define o display como flex */
-         align-items: baseline; /* Alinha os itens pela linha de base */
-         }
-         .label-acessos {
-         margin-right: 5px; /* Espaço entre o texto e o número */
-         }
-         .contador {
-         font-size: 18px;
-         color: #fff;
-         transition: color 0.3s ease;
-         font-weight: 700;
-         }
-         .mensagem {
-         font-size: 16px;
-         color: #fff; /* Alterei a cor do texto para branco para melhor contraste */
-         background-color: #D0021B; /* Cor de fundo vermelha para destacar a mensagem */
-         padding: 8px 15px; /* Espaçamento interno para fazer a mensagem se destacar mais */
-         opacity: 0;
-         transition: opacity 0.3s ease;
-         text-align: center;
-         margin: 5px; /* Espaço acima da mensagem para não ficar colado no conteúdo acima */
-         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra leve para dar um efeito elevado */
-         }
-         h1{
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EREÇÃO + 300%</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Roboto', serif;
+            background: linear-gradient(135deg, #071e49, #000);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .main-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+            margin-bottom: 40px; /* Spacing between container and footer */
+        }
+
+        h1 {
             font-size: 35px;
             font-weight: 900;
             color: #fff;
             font-style: italic;
-            margin-bottom: -0px;
-         }
-         a {
+            margin-bottom: 20px;
+        }
+
+       .acessos {
+            max-width: 800px;
+            font-size: 18px;
+            color: #fff;
+            display: flex;
+            align-items: baseline;
+            margin: 20px 0;
+        }
+
+        .label-acessos {
+            margin-right: 5px;
+        }
+
+        .contador {
+            font-size: 18px;
+            color: #fff;
+            transition: color 0.3s ease;
+            font-weight: 700;
+        }
+
+        .mensagem {
+            font-size: 16px;
+            color: #fff;
+            background-color: #D0021B;
+            padding: 8px 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            margin: 5px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            width: 100%;
+            background-color: #2C2C2C; /* Background color for footer */
+            padding: 40px 0; /* Padding for footer */
+            color: #929292; /* Text color for footer */
+            text-align: center;
+        }
+
+        .footer-content {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .footer-content a {
             color: #929292;
             text-decoration: none;
+            margin: 0 5px;
         }
-         footer {
-         width: 95%;
-         max-width: 800px;
-         text-align: center;
-         margin-top: 200px; /* Mantém o espaçamento original acima do footer */
-         font-size: 12px;
-         color: #929292;
-         
-         }
-         /* Regras de mídia para dispositivos com larguras menores */
-         @media (max-width: 600px) {
-         .container, footer {
-         width: 95%; /* Aumenta a largura para dispositivos menores */
-         max-width: none; /* Remove a restrição de largura máxima */
-         }
-         body {
-         padding-top: 20px; /* Reduz o espaçamento superior*/
-         }
-         }
-      </style>
-   </head>
-   <body>
-      <div class="acessos">
-         <span class="label-acessos">Views:</span>
-         <div id="contador" class="contador">487</div>
-      </div>
-      <div id="mensagem" class="mensagem"></div>
-      </div>
-      <div class="container">
-         <h1>ERECTION + 300%</h1>
-         <div class="video-wrapper">
-            <div id="vid_6676a4d4733d3f000a87f8f1" style="position:relative;width:100%;padding: 56.25% 0 0;">
-               <img id="thumb_6676a4d4733d3f000a87f8f1" src="https://images.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/6676a4d4733d3f000a87f8f1/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">
-               <div id="backdrop_6676a4d4733d3f000a87f8f1" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div>
-            </div>
+
+        .footer-content p {
+            margin: 10px 0;
+        }
+
+        /* Media queries for smaller devices */
+        @media (max-width: 600px) {
+            .container, .footer-content {
+                width: 95%;
+                max-width: none;
+            }
+            footer {
+                padding: 60px 0; /* Increased padding for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="acessos">
+            <span class="label-acessos">Visualizações:</span>
+            <div id="contador" class="contador">498</div>
+        </div>
+        <div id="mensagem" class="mensagem">Maximum capacity! Stay here, your access is assured.</div>
+        <div class="container">
+            <h1>EREÇÃO + 300%</h1>
+            <div id="vid_6676a4d4733d3f000a87f8f1" style="position:relative;width:100%;padding: 56.25% 0 0;"> <img id="thumb_6676a4d4733d3f000a87f8f1" src="https://images.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/6676a4d4733d3f000a87f8f1/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"> <div id="backdrop_6676a4d4733d3f000a87f8f1" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div> </div> <script type="text/javascript" id="scr_6676a4d4733d3f000a87f8f1"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/6676a4d4733d3f000a87f8f1/player.js", s.async=!0,document.head.appendChild(s); </script> <style> .elementor-element:has(#smartplayer) { width: 100%; } </style>
             <script type="text/javascript" id="scr_6676a4d4733d3f000a87f8f1">
-               var s = document.createElement("script");
-               s.src = "https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/6676a4d4733d3f000a87f8f1/player.js";
-               s.async = true;
-               document.head.appendChild(s);
+                var s=document.createElement("script");
+                s.src="https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/6676a4d4733d3f000a87f8f1/player.js";
+                s.async=true;
+                document.head.appendChild(s);
             </script>
-         </div>
-      </div>
-      <footer>
-        <p>Copyright 2024 – All rights reserved</p>
-        <a href="terms.hmtl">Terms of use</a> | <a href="privacy.html">Privacy Policy</a> | <a href="disclaimer.html">Disclaimer</a>
-        <p>This website is not part of Google, Inc. or Google.com, nor is it sponsored or endorsed by Google. YouTube is a registered trademark of Google, Inc.
-            Disclaimer: This site is provided for educational purposes only. Please consult a healthcare professional before implementing any strategies discussed on this website.</p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>Direitos autorais 2024 – Todos os direitos reservados</p>
+            <a href="terms.html">Termos de uso</a> | 
+            <a href="privacy.html">Política de Privacidade</a> | 
+            <a href="disclaimer.html">Isenção de responsabilidade</a>
+            <p>Este site não faz parte do Google, Inc. ou Google.com, nem é patrocinado ou endossado pelo Google. YouTube é uma marca registrada da Google, Inc. Isenção de responsabilidade: este site é fornecido apenas para fins educacionais. Consulte um profissional de saúde antes de implementar qualquer estratégia discutida neste site.</p>
+        </div>
     </footer>
     <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-      <script src="script.js"></script>
-   </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elementoContador = document.getElementById('contador');
+            const elementoMensagem = document.getElementById('mensagem');
+            let vagas = 487; // Início com 487 vagas
+            const maxVagas = 500; // Número máximo de vagas
+            let reducoesFeitas = 0; // Controla a quantidade de vezes que a contagem foi reduzida
+            const maxReducoes = Math.floor(Math.random() * 3) + 1; // Número máximo de reduções entre 1 e 3
+
+            function atualizarContador() {
+                if (vagas < maxVagas) {
+                    // Define quando diminuir uma vaga de forma aleatória
+                    if (reducoesFeitas < maxReducoes && (Math.random() < 0.1)) { // 10% de chance de reduzir a cada atualização
+                        vagas--; // Decrementa vagas
+                        reducoesFeitas++; // Incrementa o número de reduções feitas
+                    } else if (vagas < maxVagas) {
+                        vagas++; // Incrementa vagas
+                    }
+                    elementoContador.textContent = vagas;
+                }
+
+                if (vagas < maxVagas) {
+                    setTimeout(atualizarContador, Math.random() * 1500 + 2000); // Aumenta o intervalo para dar aspecto de incremento gradual e lento
+                } else {
+                    elementoContador.style.color = '#d00'; // Muda a cor para vermelho uma vez que atinge 500
+                    elementoMensagem.textContent = 'Maximum capacity! Stay here, your access is assured.';
+                    elementoMensagem.style.opacity = '1'; // Torna a mensagem visível
+                }
+            }
+            atualizarContador(); // Iniciar o processo
+        });
+    </script>
+</body>
 </html>
