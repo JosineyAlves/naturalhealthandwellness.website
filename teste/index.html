@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Vendas com Cabeçalho de Jornal de TV</title>
+    <style>
+        *, *:before, *:after {
+            box-sizing: border-box; /* Aplica box-sizing para todos os elementos */
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos do Cabeçalho */
+        .header {
+            background-color: #004288;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            mask-size: cover;
+            display: inline-block;
+            margin: 0 10px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .search-icon {
+            background-image: url('https://icons.iconarchive.com/icons/icons8/windows-8/512/Very-Basic-Search-icon.png');
+        }
+
+        .user-icon {
+            background-image: url('https://icons.iconarchive.com/icons/icons8/ios7/512/Users-User-Male-icon.png');
+        }
+
+        .menu {
+            background-color: #007ACC;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        /* Estilos do Conteúdo Principal */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .headline {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 0;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            margin: 0 5px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .facebook {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg');
+        }
+
+        .twitter {
+            background-image: url('https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg');
+        }
+
+        .instagram {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png');
+        }
+
+        @media (max-width: 600px) {
+            .menu {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="icon search-icon"></div>
+        <img src="https://t.gmg.io/header/wplg-logo.svg" alt="WPLG Logo">
+        <div class="icon user-icon"></div>
+    </div>
+    <div class="menu">
+        <a href="#news">News</a>
+        <a href="#weather">Weather</a>
+        <a href="#sports">Sports</a>
+        <a href="#features">Features</a>
+    </div>
+    <div class="container">
+        <h1 class="headline">Bem-vindo à Nossa Página de Vendas</h1>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/your_video_id" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#careers">Careers</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#sitemap">Sitemap</a>
+        </div>
+        <div class="social-icons">
+            <div class="social-icon facebook"></div>
+            <div class="social-icon twitter"></div>
+            <div class="social-icon instagram"></div>
+            <div>FOLLOW US</div>
+        </div>
+    </footer>
+</body>
+</html>
