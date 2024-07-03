@@ -4,55 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Vendas com Cabeçalho de Jornal de TV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         *, *:before, *:after {
-            box-sizing: border-box; /* Aplica box-sizing para todos os elementos */
+            box-sizing: border-box;
         }
 
         body, html {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
 
-        /* Estilos do Cabeçalho */
         .header {
-            background-color: #004288;
+            background-color: #23262B;
             color: white;
-            padding: 10px 20px;
+            padding: 10px 50px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            height: 60px;
+            border-bottom: 1px solid #475569;
         }
 
         .header img {
-            height: 50px;
+            height: 35px;
         }
 
         .icon {
-            width: 24px;
-            height: 24px;
-            background-color: white;
-            mask-size: cover;
-            display: inline-block;
+            color: white;
             margin: 0 10px;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .search-icon {
-            background-image: url('https://icons.iconarchive.com/icons/icons8/windows-8/512/Very-Basic-Search-icon.png');
-        }
-
-        .user-icon {
-            background-image: url('https://icons.iconarchive.com/icons/icons8/ios7/512/Users-User-Male-icon.png');
+            font-size: 18px;
         }
 
         .menu {
-            background-color: #007ACC;
+            background-color: #303236;
             display: flex;
             justify-content: center;
-            padding: 10px 0;
+            padding: 6px 0;
         }
 
         .menu a {
@@ -62,13 +52,11 @@
             font-size: 16px;
         }
 
-        /* Estilos do Conteúdo Principal */
         .container {
             width: 100%;
             max-width: 800px;
             margin: auto;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
         .headline {
@@ -76,6 +64,7 @@
             margin: 20px 0;
             font-size: 24px;
             color: #333;
+            font-weight: 900;
         }
 
         .video-wrapper {
@@ -90,62 +79,131 @@
             left: 0;
             width: 100%;
             height: 100%;
+            loading: lazy; /* Carregamento preguiçoso para iframes */
+        }
+
+        .comments-section, .creator-profile {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+        }
+
+        .comment, .profile {
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .user-image, .creator-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin-right: 10px;
+        }
+
+        .user-image img, .creator-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%; /* Bordas arredondadas para imagens */
+            loading: lazy; /* Carregamento preguiçoso para imagens */
+        }
+
+        .user-name, .creator-name {
+            font-weight: bold;
+        }
+
+        .comment-text, .creator-info {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .social-media-icons {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .social-media-icon {
+            font-size: 20px;
+            margin-right: 10px;
         }
 
         footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
+            background-color: #F8FAFC;
+            color: #222;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+            border-top: 1px solid #475569;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links {
             display: flex;
             flex-direction: column;
+            align-items: flex-start;
         }
 
         footer a {
-            color: white;
+            color: #222;
             text-decoration: none;
             padding: 5px 0;
         }
 
         .social-icons {
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
+            text-align: left;
+            padding-top: 10px;
         }
 
         .social-icon {
-            width: 24px;
-            height: 24px;
-            background-color: white;
+            color: #222;
             margin: 0 5px;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .facebook {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg');
-        }
-
-        .twitter {
-            background-image: url('https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg');
-        }
-
-        .instagram {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png');
+            font-size: 24px;
         }
 
         @media (max-width: 600px) {
+            .header {
+                padding: 10px 20px; /* Ajuste de padding para telas menores */
+            }
             .menu {
                 flex-direction: row;
+            }
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+            .social-icons {
+                order: -1;
+                padding-bottom: 10px;
+            }
+            .footer-links {
+                align-items: center;
+            }
+            .menu a, .headline {
+                font-size: 14px; /* Ajuste no tamanho da fonte para telas menores */
             }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="icon search-icon"></div>
+        <i class="fas fa-search icon"></i>
         <img src="https://t.gmg.io/header/wplg-logo.svg" alt="WPLG Logo">
-        <div class="icon user-icon"></div>
+        <i class="fas fa-user icon"></i>
     </div>
     <div class="menu">
         <a href="#news">News</a>
@@ -158,21 +216,80 @@
         <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/your_video_id" frameborder="0" allowfullscreen></iframe>
         </div>
+        <div class="creator-profile">
+          <h3>Perfil do Criador</h3>
+          <div class="profile">
+              <div class="creator-image">
+                  <img src="a75773ef-6444-479e-91a8-69f78bd1d4e5.avif" alt="Pedro Álvares" style="width:100%; height:100%; object-fit:cover;"> <!-- Atualizado com caminho da imagem -->
+              </div>
+              <div>
+                  <div class="creator-name">Pedro Álvares</div>
+                  <div class="creator-info">Criador de conteúdo focado em análises de produtos e tutoriais.</div>
+                  <div class="social-media-icons">
+                      <i class="fas fa-envelope social-media-icon"></i>
+                      <i class="fab fa-facebook-f social-media-icon"></i>
+                      <i class="fab fa-twitter social-media-icon"></i>
+                  </div>
+              </div>
+          </div>
+      </div>     
+      <div class="comments-section">
+        <h3>Comentários dos Usuários</h3>
+        <div class="comment">
+            <div class="user-image">
+                <img src="a75773ef-6444-479e-91a8-69f78bd1d4e5.avif" alt="João Silva" style="width:100%; height:100%; object-fit:cover;"> <!-- Imagem do usuário João Silva -->
+            </div>
+            <div>
+                <div class="user-name">João Silva</div>
+                <div class="comment-text">Ótimo vídeo, ajudou muito na minha decisão de compra!</div>
+            </div>
+        </div>
+        <div class="comment">
+            <div class="user-image">
+                <img src="a75773ef-6444-479e-91a8-69f78bd1d4e5.avif" alt="Maria Fernanda" style="width:100%; height:100%; object-fit:cover;"> <!-- Imagem do usuário Maria Fernanda -->
+            </div>
+            <div>
+                <div class="user-name">Maria Fernanda</div>
+                <div class="comment-text">Muito informativo, obrigada por compartilhar.</div>
+            </div>
+        </div>
+        <div class="comment">
+            <div class="user-image">
+                <img src="a75773ef-6444-479e-91a8-69f78bd1d4e5.avif" alt="Carlos Andrade" style="width:100%; height:100%; object-fit:cover;"> <!-- Imagem do usuário Carlos Andrade -->
+            </div>
+            <div>
+                <div class="user-name">Carlos Andrade</div>
+                <div class="comment-text">Estava procurando justamente por isso, valeu!</div>
+            </div>
+        </div>
+        <div class="comment">
+            <div class="user-image">
+                <img src="a75773ef-6444-479e-91a8-69f78bd1d4e5.avif" alt="Ana Paula" style="width:100%; height:100%; object-fit:cover;"> <!-- Imagem do usuário Ana Paula -->
+            </div>
+            <div>
+                <div class="user-name">Ana Paula</div
+                <div class="comment-text">Adorei a explicação, muito clara e direta.</div>
+            </div>
+        </div>
+    </div>
+  
     </div>
     <footer>
-        <div>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
-            <a href="#privacy">Privacy Policy</a>
-            <a href="#careers">Careers</a>
-            <a href="#terms">Terms of Service</a>
-            <a href="#sitemap">Sitemap</a>
-        </div>
-        <div class="social-icons">
-            <div class="social-icon facebook"></div>
-            <div class="social-icon twitter"></div>
-            <div class="social-icon instagram"></div>
-            <div>FOLLOW US</div>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+            </div>
+            <div>
+                <div>FOLLOW US</div>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f social-icon"></i>
+                    <i class="fab fa-twitter social-icon"></i>
+                    <i class="fab fa-instagram social-icon"></i>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
