@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News in focus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .header {
+            background-color: #23262B;
+            color: white;
+            padding: 10px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            border-bottom: 1px solid #475569;
+        }
+
+        .header img {
+            height: 35px;
+            max-width: 100%;
+        }
+
+        .icon {
+            color: white;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        .menu {
+            background-color: #303236;
+            display: flex;
+            justify-content: center;
+            padding: 6px 0;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .headline {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 26px;
+            color: #333;
+            font-weight: 900;
+        }
+
+        .video-wrapper {
+            padding-bottom: 100px;
+        }
+
+        .comments-section, .creator-profile {
+            margin-top:30px;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+        }
+
+        .comment, .profile {
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .user-image, .creator-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin-right: 10px;
+        }
+
+        .user-image img, .creator-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            loading: lazy;
+        }
+
+        .user-name, .creator-name {
+            font-weight: bold;
+        }
+
+        .comment-text, .creator-info {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .social-media-icons {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .social-media-icon {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #F8FAFC;
+            color: #222;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 100;
+            border-top: 1px solid #1E293B;
+
+        }
+
+        .footer-content {
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        footer a {
+            color: #222;
+            text-decoration: none;
+            padding: 5px 0;
+        }
+
+        .social-icons {
+            text-align: left;
+            padding-top: 10px;
+        }
+
+        .social-icon {
+            color: #222;
+            margin: 0 5px;
+            font-size: 24px;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 10px 20px; /* Ajuste de padding para telas menores */
+            }
+            .menu {
+                flex-direction: row;
+            }
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+            .social-icons {
+                order: -1;
+                padding-bottom: 10px;
+            }
+            .footer-links {
+                align-items: center;
+            }
+            .menu a {
+                font-size: 14px;
+            }
+            .headline {
+                font-size: 24px;
+            } 
+            
+        }
+    </style>
+    <link rel="preload" href="https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/6688c25a1e59be000bfb7df3/player.js" as="script">
+    <link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+    <link rel="preload" href="https://images.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/6688c25a1e59be000bfb7df3/thumbnail.jpg" as="image">
+    <link rel="preload" href="https://cdn.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/66859f590270ab000b3d6050/main.m3u8" as="fetch">
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://images.converteai.net">
+    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MX35NJ2W');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX35NJ2W"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="header">
+        <i class="fas fa-search icon"></i>
+        <img src="img/logo.svg" width="938" height="181" alt="WPLG Logo">
+        <i class="fas fa-user icon"></i>
+    </div>
+    <div class="menu">
+        <a href="#news">News</a>
+        <a href="#weather">Weather</a>
+        <a href="#sports">Sports</a>
+        <a href="#features">Features</a>
+    </div>
+    <div class="container">
+        <h1 class="headline">Florida man faces charges in Villages black market erectile dysfunction drug case</h1>
+        <div class="video-wrapper">
+            <div id="vid_6688c25a1e59be000bfb7df3" style="position:relative;width:100%;padding: 56.25% 0 0;"> <img id="thumb_6688c25a1e59be000bfb7df3" src="https://images.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/6688c25a1e59be000bfb7df3/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"> <div id="backdrop_6688c25a1e59be000bfb7df3" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div> </div> <script type="text/javascript" id="scr_6688c25a1e59be000bfb7df3"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/6688c25a1e59be000bfb7df3/player.js", s.async=!0,document.head.appendChild(s); </script> <style> .elementor-element:has(#smartplayer) { width: 100%; } </style>        <div class="creator-profile">
+          <h3>ABOUT THE AUTHOR</h3>
+          <div class="profile">
+              <div class="creator-image">
+                  <img src="img/img-0.webp" alt="Pedro Álvares" width="96" height="96" style="width:auto; height:100%; object-fit:cover;">
+              </div>
+              <div>
+                  <div class="creator-name">Chris Gothner</div>
+                  <div class="creator-info">Chris Gothner joined the Local 10 News team in 2022 as a Digital Journalist.</div>
+                  <div class="social-media-icons">
+                      <i class="fas fa-envelope social-media-icon"></i>
+                      <i class="fab fa-facebook-f social-media-icon"></i>
+                      <i class="fab fa-twitter social-media-icon"></i>
+                  </div>
+              </div>
+          </div>
+      </div>     
+      <div class="comments-section">
+        <h3>Conversation</h3>
+        <div class="comment">
+          <div class="user-image">
+              <img src="img/img-1.webp" alt="Maria Fernanda" width="88" height="88" style="width:auto; height:100%; object-fit:cover;"> <!-- Imagem do usuário Maria Fernanda -->
+          </div>
+          <div>
+              <div class="user-name">Roberto Buchdid</div>
+              <div class="comment-text">I only saw it thanks to my wife. It really completely changed our relationship.</div>
+          </div>
+      </div><hr>
+        <div class="comment">
+            <div class="user-image">
+                <img src="img/img-2.webp" alt="Maria Fernanda" width="88" height="88" style="width:auto; height:100%; object-fit:cover;"> <!-- Imagem do usuário Maria Fernanda -->
+            </div>
+            <div>
+                <div class="user-name">Sérgio Maroneze Duarte</div>
+                <div class="comment-text">Such a simple recipe gives extreme results.</div>
+            </div>
+        </div><hr>
+        <div class="comment">
+            <div class="user-image">
+                <img src="img/img-3.webp" alt="Carlos Andrade" width="88" height="88" style="width:auto; height:100%; object-fit:cover;"> <!-- Imagem do usuário Carlos Andrade -->
+            </div>
+            <div>
+                <div class="user-name">Jorge Jurase</div>
+                <div class="comment-text">This video was great, full of information, it helped me a lot. Thank you very much!!</div>
+            </div>
+        </div><hr>
+        <div class="comment">
+            <div class="user-image">
+                <img src="img/img-4.webp" alt="Ana Paula" width="88" height="88" style="width:auto; height:100%; object-fit:cover;"> <!-- Imagem do usuário Ana Paula -->
+            </div> 
+            <div>
+                <div class="user-name">Rafael Bett</div>
+                <div class="comment-text">100% important this video for men  health.</div>
+            </div>
+        </div>
+    </div>
+  
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="#email">Email Newsletters</a>
+                <a href="#cookie">Cookie Preferences</a>
+            </div>
+            <div>
+                <div>FOLLOW US</div>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f social-icon"></i>
+                    <i class="fab fa-twitter social-icon"></i>
+                    <i class="fab fa-instagram social-icon"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
